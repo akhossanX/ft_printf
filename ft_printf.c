@@ -6,7 +6,7 @@
 /*   By: akhossan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 16:00:33 by akhossan          #+#    #+#             */
-/*   Updated: 2019/10/11 16:00:35 by akhossan         ###   ########.fr       */
+/*   Updated: 2019/10/11 16:06:13 by akhossan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "flags.h"
 
 /*
- **	ft_printf emulates the behaviour of the C standard 
- **	function 'printf', ft_printf is a multi argument
- **	function (aka variadic function).
+ ** ft_printf emulates the behaviour of the C standard 
+ ** function 'printf', ft_printf is a multi argument
+ ** function (aka variadic function).
  ** It basically tries to display a list of variables
  ** type-defined in the string format passed as first parameter
  ** if the string format doesn't specify the appropriate
