@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akhossan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aybouras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/11 15:39:38 by akhossan          #+#    #+#             */
-/*   Updated: 2019/10/11 16:31:13 by akhossan         ###   ########.fr       */
+/*   Created: 2019/03/29 08:40:23 by aybouras          #+#    #+#             */
+/*   Updated: 2019/04/09 17:10:17 by aybouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-#include <stdarg.h>
-#include <stdint.h>
-#include <unistd.h>
-
-#endif
+int		ft_toupper(int c)
+{
+	if (ft_islower(c))
+		return (c -= 32);
+	else
+		return (c);
+}
