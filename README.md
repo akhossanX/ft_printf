@@ -25,7 +25,7 @@ int  main(void)
      return (0);
 }
 ```
-`output`: Hello World, this is 42 ft_printf project ^_^
+`output: Hello World, this is 42 ft_printf project ^_^`
 For this program to compile you must compile it with `libftprintf.a`, like: 
 ```bash
 $ cc -Werror -Wall -Wextra main.c -lftprintf -L. -I./inc
