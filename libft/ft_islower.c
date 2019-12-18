@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aybouras <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akhossan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/09 16:39:40 by aybouras          #+#    #+#             */
-/*   Updated: 2019/04/09 16:42:01 by aybouras         ###   ########.fr       */
+/*   Created: 2019/03/30 12:17:35 by akhossan          #+#    #+#             */
+/*   Updated: 2019/12/09 21:40:40 by akhossan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int		ft_islower(int c)
 {
-	if (c < 'a' || c > 'z')
-		return (0);
-	else
-		return (1);
+	return (c >= 'a' && c <= 'z');
 }

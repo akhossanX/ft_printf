@@ -6,7 +6,7 @@
 /*   By: akhossan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 11:55:22 by akhossan          #+#    #+#             */
-/*   Updated: 2019/11/24 19:41:35 by akhossan         ###   ########.fr       */
+/*   Updated: 2019/12/15 11:43:03 by akhossan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_print_d(t_args *args, t_vars *var)
 	args->result = ft_ltoa(x);
 	if (!args->flag && !args->width && args->precision == -1)
 	{
-		var->counter += ft_putstr(args->result);
+		var->counter += ft_putstr_fd(var->fd, args->result);
 		ft_strdel(&args->result);
 	}
 	else
@@ -39,7 +39,7 @@ void	ft_print_d(t_args *args, t_vars *var)
 		else
 			ft_precision(args);
 		ft_width(args);
-		var->counter += ft_putstr(args->result);
+		var->counter += ft_putstr_fd(var->fd, args->result);
 		ft_strdel(&args->result);
 	}
 }

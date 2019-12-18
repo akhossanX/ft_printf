@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhossan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/30 14:10:04 by akhossan          #+#    #+#             */
-/*   Updated: 2019/04/03 20:12:55 by akhossan         ###   ########.fr       */
+/*   Created: 2019/03/30 14:12:07 by akhossan          #+#    #+#             */
+/*   Updated: 2019/04/03 20:15:02 by akhossan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+int		ft_tolower(int c)
 {
-	if (!ft_islower(c))
+	if (!ft_isupper(c))
 		return (c);
-	return ((unsigned char)c - 32);
+	return ((unsigned char)c + 32);
 }

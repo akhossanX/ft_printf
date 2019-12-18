@@ -56,15 +56,15 @@ void	set_color(t_vars *var)
 		{
 			if (var->str[j] == '%' || !var->str[j])
 			{
-				var->counter += ft_putchar(var->str[var->i]);
+				var->counter += ft_putchar_fd(var->fd, var->str[var->i]);
 				return ;
 			}
 			j++;
 		}
 		if ((color = get_color(var->str, var->i + 1, j - 1)))
-			write(1, color, ft_strlen(color));
+			write(var->fd, color, ft_strlen(color));
 		var->i = j;
 	}
 	else
-		var->counter += ft_putchar(var->str[var->i]);
+		var->counter += ft_putchar_fd(var->fd, var->str[var->i]);
 }

@@ -6,7 +6,7 @@
 #    By: akhossan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/06 19:24:24 by akhossan          #+#    #+#              #
-#    Updated: 2019/11/29 14:47:12 by akhossan         ###   ########.fr        #
+#    Updated: 2019/12/15 12:41:05 by akhossan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ SRCS	=	ft_poubx.c\
 			va_arg_getter.c\
 			utils.c\
 			parse.c\
-			color.c
+			color.c\
+			printer_dispatcher.c
 
 HEADERS	=	inc/ft_printf.h inc/dispatcher.h inc/color.h
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aybouras <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akhossan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/09 16:31:09 by aybouras          #+#    #+#             */
-/*   Updated: 2019/04/09 16:42:35 by aybouras         ###   ########.fr       */
+/*   Created: 2019/03/30 12:17:17 by akhossan          #+#    #+#             */
+/*   Updated: 2019/12/09 21:40:39 by akhossan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int		ft_isupper(int c)
 {
-	if (c < 'A' || c > 'Z')
-		return (0);
-	else
-		return (1);
+	return (c >= 'A' && c <= 'Z');
 }

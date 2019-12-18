@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhossan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/30 14:10:04 by akhossan          #+#    #+#             */
-/*   Updated: 2019/04/03 20:12:55 by akhossan         ###   ########.fr       */
+/*   Created: 2019/12/09 11:40:07 by akhossan          #+#    #+#             */
+/*   Updated: 2019/12/15 21:49:56 by akhossan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+double		ft_sqrt(int n)
 {
-	if (!ft_islower(c))
-		return (c);
-	return ((unsigned char)c - 32);
+	double	a;
+	int		i;
+
+	a = 1.;
+	i = 0;
+	while (i < 10)
+	{
+		a = 0.5 * (a + n / a);
+		i++;
+	}
+	return (a);
 }

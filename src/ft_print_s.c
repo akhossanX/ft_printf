@@ -22,12 +22,12 @@ void	ft_print_s(t_args *args, t_vars *var)
 	if (!args->result)
 		args->result = ft_strdup("(null)");
 	if (!args->flag && !args->width && args->precision == -1)
-		var->counter += ft_putstr(args->result);
+		var->counter += ft_putstr_fd(var->fd, args->result);
 	else
 	{
 		ft_precision(args);
 		ft_width(args);
-		var->counter += ft_putstr(args->result);
+		var->counter += ft_putstr_fd(var->fd, args->result);
 	}
 	ft_strdel(&args->result);
 }

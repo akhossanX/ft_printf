@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhossan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/30 14:10:04 by akhossan          #+#    #+#             */
-/*   Updated: 2019/04/03 20:12:55 by akhossan         ###   ########.fr       */
+/*   Created: 2019/12/15 11:29:31 by akhossan          #+#    #+#             */
+/*   Updated: 2019/12/15 13:11:44 by akhossan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+int			ft_putstr_fd(int fd, const char *s)
 {
-	if (!ft_islower(c))
-		return (c);
-	return ((unsigned char)c - 32);
+	int		i;
+
+	if (fd < 0)
+		return (0);
+	i = 0;
+	while (*s)
+	{
+		i += ft_putchar_fd(fd, *s);
+		s++;
+	}
+	return (i);
 }

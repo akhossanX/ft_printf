@@ -6,7 +6,7 @@
 /*   By: akhossan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 20:54:30 by akhossan          #+#    #+#             */
-/*   Updated: 2019/11/24 19:54:07 by akhossan         ###   ########.fr       */
+/*   Updated: 2019/12/15 21:48:36 by akhossan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ typedef struct	s_args
 
 typedef struct	s_vars
 {
+	int			fd;
 	int			counter;
 	va_list		types_list;
 	char		*str;
@@ -84,7 +85,6 @@ typedef struct	s_vars
 	int			carry;
 }				t_vars;
 
-int				ft_printf(const char *format, ...);
 int				get_specifier(t_args *args, t_vars *var);
 void			get_flags(t_args *args, t_vars *var);
 void			get_width(t_args *args, t_vars *var);
@@ -115,5 +115,10 @@ t_ll			ft_signed(t_args *args, t_vars *var);
 t_float			ft_float_length(t_args *args, t_vars *var);
 char			*get_color(char *str, int begin, int end);
 void			set_color(t_vars *var);
+void			manage_args(t_args *args, t_vars *var);
+void			get_precision(t_args *args, t_vars *var);
+
+int				ft_printf(const char *format, ...);
+int				ft_dprintf(int fd, const char *format, ...);
 
 #endif

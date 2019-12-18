@@ -6,7 +6,7 @@
 /*   By: akhossan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 19:06:25 by akhossan          #+#    #+#             */
-/*   Updated: 2019/11/24 19:38:40 by akhossan         ###   ########.fr       */
+/*   Updated: 2019/12/06 21:38:52 by akhossan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ t_color	g_colors[] =
 	{"b_light_magneta", "\e[105m"},
 	{"b_light_cyan", "\e[106m"},
 	{"b_white", "\e[107m"},
-	{"bold_txt", "\e[1m"},
+	{"bold", "\e[1m"},
 	{"eoc", "\e[39m"},
 	{"eobc", "\e[49m"},
 	{"eoall", "\e[0m"},

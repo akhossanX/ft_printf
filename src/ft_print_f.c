@@ -140,6 +140,6 @@ void	ft_print_f(t_args *args, t_vars *var)
 	join_dot_to_decimal(args);
 	args->result = args->mantiss;
 	ft_width(args);
-	var->counter += ft_putstr(args->result);
+	var->counter += ft_putstr_fd(var->fd, args->result);
 	ft_strdel(&args->result);
 }

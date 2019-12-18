@@ -28,12 +28,12 @@ void	non_spec_char(t_args *args, t_vars *var)
 	pad = args->flag & MASK_ZERO ? '0' : ' ';
 	side = args->flag & MASK_MINUS ? 'R' : 'L';
 	if (args->width <= 0)
-		var->counter += ft_putstr(args->result);
+		var->counter += ft_putstr_fd(var->fd, args->result);
 	else
 	{
 		tmp = args->result;
 		args->result = padd(args->result, args->width - 1, pad, side);
-		var->counter += ft_putstr(args->result);
+		var->counter += ft_putstr_fd(var->fd, args->result);
 		ft_strdel(&tmp);
 	}
 	ft_strdel(&args->result);
@@ -53,14 +53,14 @@ void	ft_print_c(t_args *args, t_vars *var)
 	{
 		padd = args->flag & MASK_ZERO ? '0' : ' ';
 		if (args->width <= 0)
-			var->counter += ft_putchar(c);
+			var->counter += ft_putchar_fd(var->fd, c);
 		else
 		{
 			if (!(args->flag & MASK_MINUS))
-				ft_putnchar(padd, args->width - 1);
-			ft_putchar(c);
+				ft_putnchar_fd(var->fd, padd, args->width - 1);
+			ft_putchar_fd(var->fd, c);
 			if (args->flag & MASK_MINUS)
-				ft_putnchar(padd, args->width - 1);
+				ft_putnchar_fd(var->fd, padd, args->width - 1);
 			var->counter += args->width;
 		}
 	}
